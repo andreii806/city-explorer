@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>City Explorer</h1>
+        <nav class="menu">
+            <a href="#destinatii">Destinații</a>
+            <a href="#planifica">Planifică</a>
+            <a href="#recomandari">Recomandări</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="destinatii">
+            <h2>Destinații Populare</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Lisabona</h3>
+                    <p><strong>Țara:</strong> Portugalia</p>
+                    <p>Un oraș vibrant, plin de istorie și culori, faimos pentru tramvaiele sale galbene.</p>
+                    <p><em>Durată recomandată: 4 zile</em></p>
+                </article>
+                
+                <article class="card featured">
+                    <h3>Tokyo</h3>
+                    <p><strong>Țara:</strong> Japonia</p>
+                    <p>O metropolă fascinantă unde tehnologia avansată se îmbină perfect cu tradiția veche.</p>
+                    <p><em>Durată recomandată: 7 zile</em></p>
+                </article>
+                
+                <article class="card">
+                    <h3>Roma</h3>
+                    <p><strong>Țara:</strong> Italia</p>
+                    <p>Un muzeu în aer liber, plin de ruine antice, artă renascentistă și bucătărie extraordinară.</p>
+                    <p><em>Durată recomandată: 5 zile</em></p>
+                </article>
+                
+                <article class="card">
+                    <h3>Paris</h3>
+                    <p><strong>Țara:</strong> Franța</p>
+                    <p>Orașul iubirii, recunoscut pentru Turnul Eiffel, muzee de artă și cafenele cochete.</p>
+                    <p><em>Durată recomandată: 4 zile</em></p>
+                </article>
+
+                <article class="card">
+                    <h3>Reykjavik</h3>
+                    <p><strong>Țara:</strong> Islanda</p>
+                    <p>Poarta către peisaje de vis, ghețari impresionanți, vulcani activi și aurora boreală.</p>
+                    <p><em>Durată recomandată: 6 zile</em></p>
+                </article>
+            </div>
+        </section>
+
+        <section id="planifica">
+            <h2>Planifică excursia</h2>
+            <form action="#" method="get">
+                <div class="form-group">
+                    <label for="name">Nume</label>
+                    <input id="name" name="name" type="text" placeholder="Numele tău complet">
+                </div>
+                
+                <div class="form-group">
+                    <label for="destination">Destinație</label>
+                    <select id="destination" name="destination">
+                        <option value="">Alege...</option>
+                        <option value="Lisabona">Lisabona</option>
+                        <option value="Tokyo">Tokyo</option>
+                        <option value="Roma">Roma</option>
+                        <option value="Paris">Paris</option>
+                        <option value="Reykjavik">Reykjavik</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="days">Număr de zile</label>
+                    <input id="days" name="days" type="number" min="1" max="30">
+                </div>
+                
+                <button type="submit">Planifică excursia</button>
+            </form>
+        </section>
+
+        <section id="recomandari">
+            <h2>Recomandări de călătorie</h2>
+            <ul>
+                <li>Rezervă biletele de avion cu cel puțin două luni în avans pentru cele mai bune prețuri posibile.</li>
+                <li>Verifică valabilitatea actelor de călătorie (pașaport sau buletin) înainte de a face rezervările.</li>
+                <li>Fă-ți o asigurare medicală de călătorie, mai ales dacă plănuiești să vizitezi zone montane sau izolate.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Petcu Andrei Razvan, 2026</p>
+    </footer>
+</body>
+</html>
