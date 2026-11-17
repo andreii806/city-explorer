@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Laboratorul 4: fișier generat cu node genereaza.js
+db-mare.json
