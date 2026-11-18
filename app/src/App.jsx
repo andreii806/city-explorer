@@ -131,7 +131,7 @@ export default function App() {
       {/* Exercițiul 4 (fișa, punctul 3): se decomentează linia de mai jos doar cât timp
           se lucrează la panou. Montat, panoul trimite și el cereri GET /destinatii,
           care s-ar număra greșit la măsurătorile din fișă, punctele 1, 2, 4 și 5. */}
-      <PanouStatistici />
+      {/* <PanouStatistici /> */}
 
       {incarcare && <p className="stare">Se încarcă destinațiile...</p>}
       {!incarcare && eroare && (

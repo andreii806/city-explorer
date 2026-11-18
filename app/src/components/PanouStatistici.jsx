@@ -1,3 +1,6 @@
+// Lucrarea 4, exercițiul 4: varianta CORECTATĂ.
+// Fiecare corectură este marcată cu numărul simptomului din tabelul exercițiului.
+// Varianta originală, cu greșeli, este în lab4-greseli/PanouStatistici.cu-greseli.jsx.
 import { useEffect, useState } from 'react'
 
 export default function PanouStatistici() {
@@ -17,9 +20,11 @@ export default function PanouStatistici() {
 
         const date = await response.json()
         setDestinatii(date)
-        setIncarcare(false)
       } catch (err) {
         setEroare(err.message)
+      } finally {
+        // #5: oprirea indicatorului se face în finally, nu doar în try
+        setIncarcare(false)
       }
     }
 
@@ -34,8 +39,10 @@ export default function PanouStatistici() {
     return <p className="stare eroare">Statistici indisponibile: {eroare}</p>
   }
 
-  const filtrate = destinatii.filter((d) => d.zile > Number(prag))
-  const totalZile = destinatii.reduce((suma, d) => suma + d.zile, 0)
+  // #3: „cel puțin” înseamnă >=, nu >
+  const filtrate = destinatii.filter((d) => d.zile >= Number(prag))
+  // #1: totalul se calculează din lista filtrată, nu din toată lista
+  const totalZile = filtrate.reduce((suma, d) => suma + d.zile, 0)
   const medie = filtrate.length === 0 ? 0 : totalZile / filtrate.length
 
   return (
@@ -47,12 +54,14 @@ export default function PanouStatistici() {
         <input
           type="number"
           value={prag}
-          onChange={setPrag}
+          // #4: onChange primește evenimentul, nu valoarea
+          onChange={(e) => setPrag(e.target.value)}
         />{' '}
         zile
       </label>
 
-      {filtrate.length && (
+      {/* #2: condiție booleană, mesajul apare doar când lista e goală */}
+      {filtrate.length === 0 && (
         <p className="gol">Nicio destinație cu cel puțin {prag} zile.</p>
       )}
 

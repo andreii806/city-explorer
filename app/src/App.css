@@ -189,16 +189,20 @@ button:disabled {
   color: #4b5563;
 }
 
-/* Laboratorul 4, exercițiul 4: stilurile panoului, VARIANTA CU GREȘELI (temporar, pentru capturi) */
+/* Laboratorul 4, exercițiul 4: stilurile panoului, CORECTATE
+   (varianta originală, cu greșeli, este în lab4-greseli/panou.cu-greseli.css) */
+
 .panou {
   margin-bottom: 1.4rem;
   padding: 0.9rem 1rem;
   border: 1px solid #d8dbe0;
-  border-radius: 10;
+  border-radius: 10px; /* #6: lipsea unitatea de măsură (10 -> 10px) */
 }
 
+/* #7: a doua regulă „.panou h2 { margin: 0; }” de la final a fost ștearsă,
+   pentru că venea după aceasta și anula margin-bottom */
 .panou h2 {
-  margin-bottom: 0.6rem;
+  margin: 0 0 0.6rem 0;
   font-size: 1.1rem;
 }
 
@@ -220,8 +224,4 @@ button:disabled {
   padding-left: 1.1rem;
   color: #4b5563;
   font-size: 0.95rem;
-}
-
-.panou h2 {
-  margin: 0;
 }
